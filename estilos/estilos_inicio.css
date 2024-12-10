@@ -1,0 +1,369 @@
+
+/* Estilos Generales */
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten al tamaño total de los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Mejora la legibilidad */
+    color: #333; /* Color principal de texto */
+    background-color: #f9f9f9; /* Fondo claro para el cuerpo */
+}
+
+/* Main */
+main {
+    margin-top: 20px;
+}
+
+/* Estilo del inicio */
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más intensa para un efecto más atractivo */
+    border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
+    transition: box-shadow 0.3s ease-in-out; /* Transición para la sombra */
+}
+
+/* Efecto de hover para el contenedor principal */
+#inicio:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al pasar el mouse */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    flex: 1;
+    padding-right: 30px;
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.image-container img {
+    width: 150%; /* Aumento el tamaño de la imagen */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1s ease-out; /* Transición suave cuando la imagen aparezca */
+}
+
+/* Contenedor de texto */
+.text-container {
+    flex: 1;
+    padding-left: 20px;
+}
+
+/* Estilo del título */
+.text-container h1 {
+    font-size: 3rem; /* Aumento del tamaño para mayor impacto */
+    color: #005a6d;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px; /* Espaciado entre letras para un toque elegante */
+    text-transform: uppercase; /* Título en mayúsculas para más presencia */
+    transition: transform 0.3s ease; /* Transición para el hover */
+}
+
+/* Efecto de hover para el título */
+.text-container h1:hover {
+    transform: translateY(-5px); /* Efecto sutil de movimiento hacia arriba */
+}
+
+/* Estilo del párrafo */
+.text-container p {
+    font-size: 1.125rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 90%; /* Limita el ancho para mejor legibilidad */
+    margin-bottom: 30px; /* Más espacio en la parte inferior */
+    transition: color 0.3s ease; /* Transición de color suave */
+}
+
+/* Efecto de hover en el párrafo */
+.text-container p:hover {
+    color: #005a6d; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Animación de aparición de la imagen */
+#inicio img {
+    opacity: 1; /* La imagen se vuelve visible */
+}
+
+/* Animación de entrada para el contenedor */
+#inicio {
+    animation: fadeIn 1s ease-out; /* Animación de entrada para el contenedor */
+}
+
+/* Keyframes para la animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Hace que el contenido suba desde abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Servicios */
+#servicios {
+    background-color: #f1f1f1;
+    padding: 80px 20px;
+}
+
+#servicios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #005a6d;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.contenedor-servicios {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1;
+    background-color: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+    margin: 10px; /* Añadido espacio entre las tarjetas */
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+#leermasservicios {
+    text-decoration: none;
+    color: #005a6d;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+#leermasservicios:hover {
+    color: #f5a623;
+    border-color: #f5a623;
+}
+
+/* Habitaciones */
+#habitaciones {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+#habitaciones h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #005a6d;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.rooms {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.room {
+    flex: 1;
+    background-color: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+    margin: 10px;
+}
+
+.room:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.room h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.room p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    #inicio {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .image-container, .text-container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contenedor-servicios, .rooms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service, .room {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #servicios h2, #habitaciones h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Comentarios Clientes Carrusel */
+
+#clientes {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+#clientes h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #005a6d;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 320px;
+    background-color: #fff;
+    padding: 30px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item .quote {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.testimonial-footer {
+    font-size: 14px;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stars {
+    color: #f5a623;
+    margin: 10px 0;
+}
+
+.nationality {
+    margin-top: 10px;
+}
+
+.nationality .flag-icon {
+    width: 30px;  /* Tamaño de la bandera */
+    height: 20px; /* Tamaño de la bandera */
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    background-color: #005a6d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.carousel-controls button:hover {
+    background-color: #f5a623;
+}

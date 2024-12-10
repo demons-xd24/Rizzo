@@ -1,0 +1,307 @@
+/* Estilo del contacto */
+#contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones para sombra y transformación */
+}
+
+#contacto:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02); /* Efecto de escala al pasar el mouse */
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: opacity 0.5s ease; /* Transición para la opacidad */
+}
+
+.image-container img {
+    width: 100%; /* Ajusta el ancho para mejor visualización */
+    height: auto;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-out; /* Transición más lenta para aparecer */
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Transición para el contenedor de texto */
+}
+
+.text-container h1 {
+    font-size: 3rem;
+    color: #005a6d;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease; /* Transición para la transformación */
+}
+
+.text-container h1:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center; /* Alineación centrada */
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #005a6d;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* Diseño del formulario */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaciado entre las secciones */
+    padding: 40px;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+    gap: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%; /* Ancho máximo expandido */
+    max-width: 800px; /* Limitar el ancho máximo del contenedor */
+    flex: 1; /* Expandir contenedor horizontalmente */
+}
+
+.contact-container h2 {
+    font-size: 2.5rem; /* Incrementar tamaño del encabezado */
+    color: #005a6d;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 90%; /* Limitar ancho para mejorar legibilidad */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1.2rem; /* Mejorar tamaño de letra */
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 18px; /* Aumentar tamaño del padding */
+    font-size: 1.2rem; /* Mejorar tamaño de letra */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ajustar el ancho al 100% del contenedor */
+    max-width: 700px; /* Establecer un ancho máximo para los campos */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.4);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px; /* Ajustar altura mínima para mejor visualización */
+}
+
+button {
+    background-color: #005a6d;
+    color: white;
+    font-size: 1.2rem;
+    padding: 16px 28px; /* Aumentar tamaño del padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    width: 100%; /* Hacer que el botón ocupe todo el ancho del formulario */
+    max-width: 300px; /* Limitar el ancho del botón */
+}
+
+button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+    gap: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%; /* Ancho máximo expandido */
+    max-width: 100%; /* Expandir contenedor horizontalmente */
+    flex: 1; /* Expandir contenedor horizontalmente */
+}
+
+.map-container h2 {
+    font-size: 2rem; /* Ajustar tamaño del encabezado */
+    color: #005a6d;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.map-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 90%; /* Limitar ancho para mejorar legibilidad */
+}
+
+.map-responsive {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-responsive iframe {
+    width: 100%;
+    height: 450px; /* Ajustar altura para mejor visualización */
+    border: 0;
+}
+
+/* Responsivity */
+@media (max-width: 1024px) {
+    .contact-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-container p {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1.05rem;
+    }
+
+    .map-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .map-container p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 1.05rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .map-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .map-container p {
+        font-size: 0.9rem;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Alineación de contactos en una sola columna */
+    }
+
+    .image-container {
+        padding-right: 0;
+        margin-bottom: 20px; /* Espaciado inferior para el contenedor de imagen */
+    }
+
+    .text-container {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-container p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .map-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .map-container p {
+        font-size: 0.8rem;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Alineación de contactos en una sola columna */
+    }
+
+    .image-container {
+        padding: 0 20px; /* Ajuste del padding en pantallas muy pequeñas */
+    }
+
+    .text-container {
+        padding: 0 20px; /* Ajuste del padding en pantallas muy pequeñas */
+    }
+}

@@ -1,0 +1,218 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EFEFEF; /* Fondo general */
+    color: #2C2C2C; /* Texto estándar */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+h1, h3, h4 {
+    margin: 0;
+    transition: color 0.3s ease; /* Transición para títulos */
+}
+
+h1:hover, h3:hover, h4:hover {
+    color: #005a6d; /* Cambio de color al pasar el ratón */
+}
+
+#intro {
+    padding: 40px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    display: flex;
+    flex-direction: column; /* Cambiado para acomodarse en pantalla pequeña */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column; /* Cambiado para acomodarse en pantalla pequeña */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-text {
+    flex: 1;
+    padding: 0 20px; /* Espaciado horizontal mejorado */
+    text-align: center; /* Alineación centrada en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio inferior para pantallas pequeñas */
+}
+
+.intro-text h1 {
+    color: #005a6d; /* Azul oscuro */
+    font-size: 2.5em;
+    font-weight: bold;
+    animation: fadeInText 1.5s ease; /* Animación de entrada para el texto */
+    transition: transform 0.3s ease; /* Transición de levantado */
+}
+
+.intro-text h1:hover {
+    transform: translateY(-5px); /* Efecto de levantado cuando se pasa el mouse */
+}
+
+.intro-text p {
+    color: #2C2C2C; /* Texto estándar */
+    font-size: 1.2em;
+    margin-top: 10px;
+    transition: color 0.3s ease; /* Transición para cambio de color */
+    animation: fadeInParagraph 1.5s ease; /* Animación de entrada para el párrafo */
+}
+
+.intro-text p:hover {
+    color: #005a6d; /* Cambia el color al pasar el ratón */
+}
+
+.intro-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInImage 1.5s ease; /* Animación de entrada para la imagen */
+    transition: none; /* Deshabilita cualquier efecto de transición en la imagen */
+}
+
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .intro-text {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .intro-image {
+        margin-top: 20px; /* Mejor separación en dispositivos pequeños */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 1.8em;
+    }
+
+    .intro-text p {
+        font-size: 1em; /* Ajuste de tamaño del texto */
+    }
+
+    .intro-image img {
+        width: 100%; /* Imagen adaptada al ancho */
+    }
+}
+
+#vision-mission {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.vision, .mission {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision:hover, .mission:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vision h2, .mission h2 {
+    color: #005a6d; /* Azul oscuro */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#experience {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#experience .experience-box {
+    background-color: #005a6d; /* Azul oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease; /* Animación de entrada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición */
+}
+
+#experience .experience-box:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+    color: #FFFFFF; /* Mantener el texto blanco */
+}
+
+#why-choose-us {
+    padding: 40px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reason {
+    background-color: #FFFFFF; /* Fondo blanco */
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reason h4 {
+    background-color: #005a6d; /* Azul oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reason h4:hover {
+    background-color: #003f50; /* Azul más oscuro */
+}
+
+.reason p {
+    color: #2C2C2C; /* Texto estándar */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

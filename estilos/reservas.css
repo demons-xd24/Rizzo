@@ -1,0 +1,214 @@
+/* reservas.css */
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sección de reserva */
+#reserva {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Resumen de la habitación */
+.resumen-habitacion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.resumen-habitacion img {
+    width: 200px; /* Imagen más grande */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.resumen-habitacion h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.resumen-habitacion p {
+    margin: 5px 0;
+}
+
+/* Selector de habitaciones */
+#habitaciones-disponibles {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Sección de servicios adicionales */
+#servicios-adicionales {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+#servicios-adicionales h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#servicios-adicionales ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#servicios-adicionales li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#servicios-adicionales input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#servicios-adicionales label {
+    font-size: 1em;
+    color: #333;
+    flex: 1;
+    padding-right: 10px;
+}
+
+#servicios-adicionales .servicio {
+    display: flex;
+    justify-content: space-between;
+}
+
+#servicios-adicionales .servicio span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+#servicios-adicionales .total {
+    font-weight: bold;
+    color: #005a6d;
+    margin-top: 15px;
+}
+
+
+/* Formulario de reserva */
+#formulario-reserva {
+    margin-top: 20px;
+}
+
+#formulario-reserva label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#formulario-reserva input[type="date"],
+#formulario-reserva input[type="number"],
+#formulario-reserva select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.servicio {
+    margin-right: 10px;
+}
+
+/* Botones */
+button {
+    background-color: #57bc50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #5ce86c;
+}
+
+/* Total del costo */
+#total-costo {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/* Confirmación de reserva */
+#reserva-confirmada {
+    background: #e9f7ef;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#reserva-confirmada h2 {
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+#reserva-confirmada p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .resumen-habitacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resumen-habitacion img {
+        width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #servicios-adicionales p {
+        display: flex;
+        align-items: center;
+    }
+
+    #servicios-adicionales input[type="checkbox"] {
+        margin-right: 5px;
+    }
+}

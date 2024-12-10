@@ -2,42 +2,81 @@
 #contacto {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centra los elementos en el eje horizontal */
     align-items: center;
+    gap: 20px; /* Espaciado entre los elementos */
     padding: 60px 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones para sombra y transformación */
-}
-
-#contacto:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transform: scale(1.02); /* Efecto de escala al pasar el mouse */
 }
 
 .image-container {
-    flex: 1;
-    padding-right: 30px;
+    flex-basis: 45%; /* Ocupa el 45% del espacio */
+    min-width: 280px; /* Tamaño mínimo para pantallas pequeñas */
+    max-width: 600px; /* Tamaño máximo para pantallas grandes */
     overflow: hidden;
     border-radius: 10px;
     transition: opacity 0.5s ease; /* Transición para la opacidad */
 }
 
 .image-container img {
-    width: 100%; /* Ajusta el ancho para mejor visualización */
+    width: 100%;
     height: auto;
-    object-fit: cover;
-    opacity: 1;
-    transition: opacity 1s ease-out; /* Transición más lenta para aparecer */
+    object-fit: cover; /* Ajusta la imagen para que se recorte sin deformarse */
 }
 
 .text-container {
-    flex: 1;
-    padding-left: 20px;
+    flex-basis: 50%; /* Ocupa el 50% del espacio */
     text-align: center;
-    transition: transform 0.3s ease; /* Transición para el contenedor de texto */
 }
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    #contacto {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    }
+
+    .image-container {
+        flex-basis: 70%; /* Aumenta el ancho relativo de la imagen */
+    }
+
+    .text-container {
+        flex-basis: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Reduce el padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-basis: 90%; /* La imagen ocupa la mayor parte del ancho */
+        padding: 10px; /* Agrega un pequeño margen interno */
+    }
+
+    .text-container h1 {
+        font-size: 2rem; /* Reduce el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        flex-basis: 100%; /* La imagen ocupa todo el ancho */
+        margin-bottom: 15px; /* Agrega espacio inferior */
+    }
+
+    .image-container img {
+        max-height: 300px; /* Limita la altura para pantallas muy pequeñas */
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    }
+
+    .text-container p {
+        font-size: 0.9rem; /* Ajusta el texto para legibilidad */
+    }
+}
+
 
 .text-container h1 {
     font-size: 3rem;

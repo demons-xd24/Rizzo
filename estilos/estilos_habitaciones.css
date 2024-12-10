@@ -184,9 +184,14 @@ h1, h2, h3, h4 {
     }
 
     .habitacion {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        height: 680px; /* Aumento un poco la altura */
+        width: 95%; /* Ocupa casi todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
         margin-bottom: 20px; /* Espaciado vertical entre las habitaciones */
+    }
+
+    .habitacion img {
+        width: 100%; /* Asegura que las imágenes sean responsivas */
+        height: auto; /* Mantén la proporción de las imágenes */
     }
 
     .modal-content {
@@ -196,8 +201,11 @@ h1, h2, h3, h4 {
 
     .reservar, .ver-mas {
         display: block; /* Asegura que los botones se muestren */
-        width: 80%; /* Ajusta el ancho para que se vea más centrado */
+        width: 90%; /* Ajusta el ancho para que sea más cómodo */
+        padding: 10px 0; /* Ajusta el padding para mayor visibilidad */
         margin: 10px auto; /* Centra los botones */
+        font-size: 1em; /* Aumenta ligeramente el tamaño del texto */
+        text-align: center; /* Centra el texto en los botones */
     }
 }
 
@@ -208,9 +216,14 @@ h1, h2, h3, h4 {
     }
 
     .habitacion {
-        width: 90%; /* Ocupa casi todo el ancho disponible */
-        height: 550px; /* Mantengo la altura ajustada */
-        margin-bottom: 10px; /* Espaciado vertical entre las habitaciones */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-bottom: 15px; /* Espaciado vertical entre las habitaciones */
+    }
+
+    .habitacion img {
+        width: 100%; /* Imágenes responsivas */
+        height: auto; /* Mantén la proporción */
     }
 
     .modal-content {
@@ -221,7 +234,10 @@ h1, h2, h3, h4 {
     .reservar, .ver-mas {
         display: block; /* Asegura que los botones se muestren */
         width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 12px 0; /* Mejora la usabilidad */
         margin: 10px auto; /* Centra los botones */
+        font-size: 1.2em; /* Incrementa el tamaño del texto para mayor legibilidad */
+        text-align: center; /* Centra el texto en los botones */
     }
 }
 

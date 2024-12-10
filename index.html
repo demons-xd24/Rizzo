@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Rizzo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos_inicio.css">
+    <script src="scripts/scripts.js" defer></script>
+    
+</head>
+
+<body>
+    <header>
+    <nav>
+        <div class="logo-container">
+            <span class="logo">RIZZO HOTEL</span> 
+            <span class="stars">&#9733;&#9733;&#9733;</span>
+        </div>
+        
+        <ul class="menu">
+            <li><a class="menu-item" href="inio2.html">Inicio</a></li>
+            <li><a class="menu-item" href="servicios.html">Servicios</a></li>
+            <li><a class="menu-item" href="habitaciones.html">Habitaciones</a></li>
+            <li><a class="menu-item" href="reservas.html">Reservas</a></li>
+            <li><a class="menu-item" href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li><a class="menu-item" href="contactanos.html">Contáctanos</a></li>
+        </ul>
+        <ul class="auth">
+            <li><a href="registrarse.html"><i class="fas fa-user"></i> Iniciar Sesión</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="menu-mobile">
+            <li><a class="menu-item" href="inio2.html">Inicio</a></li>
+            <li><a class="menu-item" href="servicios.html">Servicios</a></li>
+            <li><a class="menu-item" href="habitaciones.html">Habitaciones</a></li>
+            <li><a class="menu-item" href="reservas.html">Reservas</a></li>
+            <li><a class="menu-item" href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li><a class="menu-item" href="contactanos.html">Contáctanos</a></li>
+            <li><a href="registrarse.html"><i class="fas fa-user"></i> Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <!-- Inicio Section Dividido -->
+        <section id="inicio">
+            <div class="image-container">
+                <img src="imagenes/cix2.jpg" alt="Hotel Rizzo - Portada" class="full-width-image">
+            </div>
+            <div class="text-container">
+                <h1>Cuando pienses en viajar, piensa en el Hotel Rizzo</h1>
+                <p>Vive una experiencia de lujo y confort inigualable.</p>
+            </div>
+        </section>
+
+       <!-- Servicios Section -->
+<section id="servicios">
+    <h2>Servicios</h2>
+    <div class="contenedor-servicios">
+        <div class="service">
+            <img src="imagenes/room-service.jpg" alt="Servicio a la habitación">
+            <h3>Servicio a la Habitación</h3>
+            <p>Entrega de alimentos, limpieza de habitaciones y más.</p>
+            <a href="servicios.html" id="leermasservicios">Leer más</a>
+        </div>
+        <div class="service">
+            <img src="imagenes/spa.jpg" alt="Spa">
+            <h3>Spa</h3>
+            <p>Relájate con masajes y tratamientos faciales.</p>
+            <a href="servicios.html" id="leermasservicios">Leer más</a>
+        </div>
+        <div class="service">
+            <img src="imagenes/meeting.jpg" alt="Reuniones y banquetes">
+            <h3>Reuniones y Banquetes</h3>
+            <p>Organizamos eventos con servicios personalizados.</p>
+            <a href="servicios.html" id="leermasservicios">Leer más</a>
+        </div>
+    </div>
+</section>
+
+<!-- Habitaciones Section -->
+<section id="habitaciones" class="black-background">
+    <h2>Habitaciones</h2>
+    <div class="rooms">
+        <div class="room">
+            <img src="imagenes/habitacion_sencilla.jpg" alt="Habitación sencilla">
+            <h3>Habitación sencilla</h3>
+            <p>Perfecta para viajeros solitarios.</p>
+        </div>
+        <div class="room">
+            <img src="imagenes/habitacion_doble.jpg" alt="Habitación doble">
+            <h3>Habitación doble</h3>
+            <p>Espaciosa y cómoda, ideal para parejas o amigos.</p>
+        </div>
+        <div class="room">
+            <img src="imagenes/habitacion_triple.jpg" alt="Habitación triple">
+            <h3>Habitación triple</h3>
+            <p>Espacio para grupos o familias.</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Comentarios de Clientes -->
+        <section id="clientes">
+            <h2>Lo que dicen nuestros huéspedes</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-item">
+                        <p class="quote">"Excelente atención y confort durante toda nuestra estancia. ¡Volveremos pronto!"</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Ana G.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-pe"></span></span> <!-- Bandera de Perú -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"Ambiente relajante y un personal amable. Totalmente recomendable."</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Carlos H.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-us"></span></span> <!-- Bandera de Estados Unidos -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"Comida deliciosa y habitaciones impecables. Una experiencia única."</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Luisa M.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-it"></span></span> <!-- Bandera de Italia -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"Excelente relación calidad-precio. El servicio fue de primera."</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Juan P.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-mx"></span></span> <!-- Bandera de México -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"Un lugar perfecto para descansar y disfrutar de la naturaleza. Muy recomendable."</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Maria L.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-ar"></span></span> <!-- Bandera de Argentina -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"El servicio fue excepcional. Todo muy limpio y bien organizado. Volveremos."</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Pedro J.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-co"></span></span> <!-- Bandera de Colombia -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"El ambiente es muy acogedor y la comida espectacular. ¡Recomendado!"</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Luis R.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-cl"></span></span> <!-- Bandera de Chile -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="quote">"Maravillosa estancia. La atención al cliente fue excelente."</p>
+                        <div class="testimonial-footer">
+                            <span><i class="fas fa-user"></i> Rosa T.</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="nationality"><span class="flag-icon flag-icon-es"></span></span> <!-- Bandera de España -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>     
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>"Crea recuerdos que durarán toda la vida"</p>
+            <p>Hospédate en el Hotel Rizzo y vive una experiencia única.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/hotelrizzochiclayo" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://x.com/home?lang=es" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2024 Hotel Rizzo - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

@@ -252,5 +252,62 @@ button:active {
     height: 450px; /* Ajustar altura para mejor visualización */
     border: 0;
 }
+/* Responsivity */
+@media (max-width: 1024px) {
+    .contact-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-container p {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1.05rem;
+    }
+
+    .map-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .map-container p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 1.05rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .map-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .map-container p {
+        font-size: 0.9rem;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Alineación de contactos en una sola columna */
+    }
+
+    .image-container {
+        padding-right: 0;
+        margin-bottom: 20px; /* Espaciado inferior para el contenedor de imagen */
+    }
+
+    .text-container {
+        padding-left: 0;
+    }
+}
 
 

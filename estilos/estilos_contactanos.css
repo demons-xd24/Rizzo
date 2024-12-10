@@ -1,81 +1,85 @@
-/* Estilo del contacto */
+/* General styles for the contacto section */
 #contacto {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos en el eje horizontal */
+    justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Espaciado entre los elementos */
     padding: 60px 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Image container adjustments */
 .image-container {
-    flex-basis: 45%; /* Ocupa el 45% del espacio */
-    min-width: 280px; /* Tamaño mínimo para pantallas pequeñas */
-    max-width: 600px; /* Tamaño máximo para pantallas grandes */
+    flex: 1;
+    padding-right: 30px;
     overflow: hidden;
     border-radius: 10px;
-    transition: opacity 0.5s ease; /* Transición para la opacidad */
+    transition: opacity 0.5s ease;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ajusta la imagen para que se recorte sin deformarse */
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-out;
 }
 
+/* Text container */
 .text-container {
-    flex-basis: 50%; /* Ocupa el 50% del espacio */
+    flex: 1;
+    padding-left: 20px;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
-/* Responsividad */
-@media (max-width: 1024px) {
+/* Responsive design adjustments */
+@media (max-width: 768px) {
     #contacto {
-        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        flex-direction: column; /* Cambiar disposición a columna */
+        align-items: center; /* Centrar elementos */
+        padding: 40px 10px; /* Reducir padding */
     }
 
     .image-container {
-        flex-basis: 70%; /* Aumenta el ancho relativo de la imagen */
+        flex: none; /* Elimina restricciones de flexibilidad */
+        padding: 0; /* Sin padding lateral */
+        margin-bottom: 20px; /* Espacio entre imagen y texto */
+        width: 80%; /* Imagen más ajustada */
     }
 
     .text-container {
-        flex-basis: 100%; /* Ocupa todo el ancho disponible */
-        padding: 10px; /* Reduce el padding */
-    }
-}
-
-@media (max-width: 768px) {
-    .image-container {
-        flex-basis: 90%; /* La imagen ocupa la mayor parte del ancho */
-        padding: 10px; /* Agrega un pequeño margen interno */
+        flex: none;
+        padding: 0 10px; /* Reducir padding lateral */
     }
 
     .text-container h1 {
-        font-size: 2rem; /* Reduce el tamaño del texto */
+        font-size: 2rem; /* Reducir tamaño de fuente */
+        margin-bottom: 15px; /* Ajustar márgenes */
+    }
+
+    .contact-info {
+        font-size: 0.9rem; /* Reducir tamaño de fuente */
     }
 }
 
 @media (max-width: 480px) {
     .image-container {
-        flex-basis: 100%; /* La imagen ocupa todo el ancho */
-        margin-bottom: 15px; /* Agrega espacio inferior */
-    }
-
-    .image-container img {
-        max-height: 300px; /* Limita la altura para pantallas muy pequeñas */
+        width: 100%; /* Imagen ocupa todo el ancho */
     }
 
     .text-container h1 {
-        font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+        font-size: 1.8rem; /* Tamaño más pequeño en pantallas ultra pequeñas */
     }
 
-    .text-container p {
-        font-size: 0.9rem; /* Ajusta el texto para legibilidad */
+    .contact-info {
+        font-size: 0.8rem;
     }
 }
+
 
 
 .text-container h1 {

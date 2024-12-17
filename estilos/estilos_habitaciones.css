@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 100;
     background-color: #EFEFEF;
     color: #2C2C2C;
     line-height: 1.6;
@@ -240,4 +240,3 @@ h1, h2, h3, h4 {
         text-align: center; /* Centra el texto en los botones */
     }
 }
-

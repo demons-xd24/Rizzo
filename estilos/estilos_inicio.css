@@ -25,30 +25,30 @@ main {
     align-items: center;
     padding: 60px 20px;
     background-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más intensa para un efecto más atractivo */
-    border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
-    transition: box-shadow 0.3s ease-in-out; /* Transición para la sombra */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    transition: box-shadow 0.3s ease-in-out; 
 }
 
 /* Efecto de hover para el contenedor principal */
 #inicio:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
 }
 
 /* Contenedor de la imagen */
 .image-container {
     flex: 1;
     padding-right: 30px;
-    overflow: hidden; /* Asegura que la imagen no se desborde */
-    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; 
+    border-radius: 10px; 
 }
 
 .image-container img {
-    width: 150%; /* Aumento el tamaño de la imagen */
+    width: 150%; 
     height: auto;
-    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 1s ease-out; /* Transición suave cuando la imagen aparezca */
+    object-fit: cover; 
+    opacity: 0; 
+    transition: opacity 1s ease-out; 
 }
 
 /* Contenedor de texto */
@@ -59,18 +59,18 @@ main {
 
 /* Estilo del título */
 .text-container h1 {
-    font-size: 3rem; /* Aumento del tamaño para mayor impacto */
+    font-size: 3rem; 
     color: #005a6d;
     margin-bottom: 20px;
     font-weight: 700;
-    letter-spacing: 1px; /* Espaciado entre letras para un toque elegante */
-    text-transform: uppercase; /* Título en mayúsculas para más presencia */
-    transition: transform 0.3s ease; /* Transición para el hover */
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    transition: transform 0.3s ease; 
 }
 
 /* Efecto de hover para el título */
 .text-container h1:hover {
-    transform: translateY(-5px); /* Efecto sutil de movimiento hacia arriba */
+    transform: translateY(-5px); 
 }
 
 /* Estilo del párrafo */
@@ -78,31 +78,31 @@ main {
     font-size: 1.125rem;
     color: #666;
     line-height: 1.8;
-    max-width: 90%; /* Limita el ancho para mejor legibilidad */
-    margin-bottom: 30px; /* Más espacio en la parte inferior */
-    transition: color 0.3s ease; /* Transición de color suave */
+    max-width: 90%; 
+    margin-bottom: 30px; 
+    transition: color 0.3s ease; 
 }
 
 /* Efecto de hover en el párrafo */
 .text-container p:hover {
-    color: #005a6d; /* Cambia el color del texto al pasar el mouse */
+    color: #005a6d; 
 }
 
 /* Animación de aparición de la imagen */
 #inicio img {
-    opacity: 1; /* La imagen se vuelve visible */
+    opacity: 1; 
 }
 
 /* Animación de entrada para el contenedor */
 #inicio {
-    animation: fadeIn 1s ease-out; /* Animación de entrada para el contenedor */
+    animation: fadeIn 1s ease-out; 
 }
 
 /* Keyframes para la animación de desvanecimiento */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px); /* Hace que el contenido suba desde abajo */
+        transform: translateY(30px); 
     }
     to {
         opacity: 1;
@@ -113,7 +113,7 @@ main {
 
 /* Servicios */
 #servicios {
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
     padding: 80px 20px;
 }
 
@@ -141,7 +141,7 @@ main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 280px;
-    margin: 10px; /* Añadido espacio entre las tarjetas */
+    margin: 10px; 
 }
 
 .service:hover {
@@ -342,8 +342,8 @@ main {
 }
 
 .nationality .flag-icon {
-    width: 30px;  /* Tamaño de la bandera */
-    height: 20px; /* Tamaño de la bandera */
+    width: 30px; 
+    height: 20px; 
 }
 
 .carousel-controls {
@@ -367,47 +367,48 @@ main {
 .carousel-controls button:hover {
     background-color: #f5a623;
 }
+
 /* Media Queries para Pantallas Muy Pequeñas */
 @media (max-width: 576px) {
     #inicio {
-        flex-direction: column; /* Cambia a disposición vertical */
+        flex-direction: column; 
         padding: 20px 10px;
-        text-align: center; /* Alinea el texto al centro */
+        text-align: center; 
     }
 
     .image-container {
-        padding-right: 0; /* Elimina espacio innecesario */
-        margin-bottom: 20px; /* Espacio entre imagen y texto */
+        padding-right: 0; 
+        margin-bottom: 20px; 
     }
 
     .image-container img {
-        width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
-        border-radius: 10px; /* Mantén los bordes redondeados */
+        width: 100%; 
+        border-radius: 10px; 
     }
 
     .text-container {
-        padding-left: 0; /* Elimina espacio extra */
-        max-width: 100%; /* Asegura que el texto ocupe el ancho disponible */
+        padding-left: 0; 
+        max-width: 100%; 
     }
 
     .text-container h1 {
-        font-size: 2rem; /* Reduce el tamaño del título */
-        margin-bottom: 15px; /* Espacio entre el título y el párrafo */
+        font-size: 2rem;
+        margin-bottom: 15px; 
     }
 
     .text-container p {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
-        max-width: 90%; /* Limita el ancho del párrafo para mejor lectura */
-        margin: 0 auto; /* Centra el párrafo */
+        font-size: 1rem; 
+        max-width: 90%; 
+        margin: 0 auto; 
     }
 
     .contenedor-servicios, .rooms {
-        flex-direction: column; /* Cambia a disposición vertical */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .service, .room {
-        width: 90%; /* Reduce el tamaño de las tarjetas */
-        margin-bottom: 20px; /* Espacio entre tarjetas */
+        width: 90%; 
+        margin-bottom: 20px; 
     }
 }

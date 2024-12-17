@@ -1,223 +1,82 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Rizzo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
-    <link rel="stylesheet" href="estilos/reservas.css">
-    <script src="scripts/scripts.js" defer></script>
-    <script src="scripts/reservas.js" defer></script>
-    
-</head>
-
-<body>
-    <header>
-    <nav>
-        <div class="logo-container">
-            <span class="logo">RIZZO HOTEL</span> 
-            <span class="stars">&#9733;&#9733;&#9733;</span>
-        </div>
-        
-        <ul class="menu">
-            <li><a class="menu-item" href="index.html">Inicio</a></li>
-            <li><a class="menu-item" href="servicios.html">Servicios</a></li>
-            <li><a class="menu-item" href="habitaciones.html">Habitaciones</a></li>
-            <li><a class="menu-item" href="reservas.html">Reservas</a></li>
-            <li><a class="menu-item" href="sobrenosotros.html">Sobre Nosotros</a></li>
-            <li><a class="menu-item" href="contactanos.html">Contáctanos</a></li>
-        </ul>
-        <ul class="auth">
-            <li><a href="registrarse.html"><i class="fas fa-user"></i> Iniciar Sesión</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="menu-mobile">
-            <li><a class="menu-item" href="index.html">Inicio</a></li>
-            <li><a class="menu-item" href="servicios.html">Servicios</a></li>
-            <li><a class="menu-item" href="habitaciones.html">Habitaciones</a></li>
-            <li><a class="menu-item" href="reservas.html">Reservas</a></li>
-            <li><a class="menu-item" href="sobrenosotros.html">Sobre Nosotros</a></li>
-            <li><a class="menu-item" href="contactanos.html">Contáctanos</a></li>
-            <li><a href="registrarse.html"><i class="fas fa-user"></i> Iniciar Sesión</a></li>
-        </ul>
-    </nav>
-</header>
-    <section id="reserva">
-        <div class="resumen-habitacion">
-            <img id="imagen-habitacion" src="" alt="Habitación seleccionada">
-            <h3 id="nombre-habitacion"></h3>
-            <p id="descripcion-habitacion"></p>
-            <p>Precio por noche: <span id="precio-habitacion"></span></p>
-            <p>Capacidad máxima: <span id="capacidad-habitacion"></span></p>
-        </div>
-        <div>
-            <label for="habitaciones-disponibles">Cambiar habitación:</label>
-            <select id="habitaciones-disponibles" onchange="cambiarHabitacion()">
-                <option value="habitacion_sencilla">Habitación sencilla</option>
-                <option value="habitacion_doble">Habitación doble</option>
-                <option value="habitacion_triple">Habitación triple</option>
-                <option value="habitacion_matrimonial">Habitación matrimonial</option>
-                <option value="habitacion_ejecutiva">Habitación ejecutiva</option>
-                <option value="habitacion_presidencial">Habitación presidencial</option>
-                <option value="apartahotel">Apartahotel</option>
-                <option value="habitacion_king">Habitación King</option>
-            </select>
-        </div>
-        <form id="formulario-reserva" onsubmit="return confirmarReserva(event)">
-            <label for="fecha-llegada">Fecha de llegada:</label>
-            <input type="date" id="fecha-llegada" required>
-            
-            <label for="fecha-salida">Fecha de salida:</label>
-            <input type="date" id="fecha-salida" required>
-            
-            <label for="cantidad-personas">Cantidad de personas:</label>
-            <input type="number" id="cantidad-personas" min="1" required>
-            
-            <fieldset>
-                <legend>Servicios adicionales:</legend>
-                <label>
-                    <input type="checkbox" class="servicio" value="50" id="servicio-habitacion">
-                    Servicio a la habitación (S/ 50)
-                </label><br>
-                <label>
-                    <input type="checkbox" class="servicio" value="100" id="servicio-spa">
-                    Spa (S/ 100)
-                </label><br>
-                <label>
-                    <input type="checkbox" class="servicio" value="200" id="servicio-reuniones">
-                    Reuniones/Banquetes (S/ 200)
-                </label><br>
-                <label>
-                    <input type="checkbox" class="servicio" value="300" id="servicio-eventos">
-                    Sala de eventos (S/ 300)
-                </label>
-            </fieldset>
-            
-            <button type="button" onclick="calcularCosto()">Calcular costo</button>
-            <p>Total: <span id="total-costo">S/ 0</span></p>
-            
-            <button type="submit">Confirmar reserva</button>
-        </form>
-
-        <div id="reserva-confirmada" style="display:none;">
-            <h2>Reserva confirmada</h2>
-            <p>Habitación: <span id="confirmacion-habitacion"></span></p>
-            <p>Fecha de llegada: <span id="confirmacion-fecha-llegada"></span></p>
-            <p>Fecha de salida: <span id="confirmacion-fecha-salida"></span></p>
-            <p>Servicios adicionales: <span id="confirmacion-servicios"></span></p>
-            <p>Total: <span id="confirmacion-total">S/ 0</span></p>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <p>"Crea recuerdos que durarán toda la vida"</p>
-            <p>Hospédate en el Hotel Rizzo y vive una experiencia única.</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/hotelrizzochiclayo" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://x.com/home?lang=es" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <p>&copy; 2024 Hotel Rizzo - Todos los derechos reservados</p>
-    </footer>
-</body>
-<script>
-    const habitaciones = {
-        habitacion_sencilla: { nombre: "Habitación sencilla", precio: 150, capacidad: "1-2 personas", imagen: "imagenes/habitacion_sencilla.jpg", descripcion: "Una habitación cómoda para 1 a 2 personas." },
-        habitacion_doble: { nombre: "Habitación doble", precio: 250, capacidad: "2-3 personas", imagen: "imagenes/habitacion_doble.jpg", descripcion: "Habitación ideal para parejas." },
-        habitacion_triple: { nombre: "Habitación triple", precio: 300, capacidad: "3 personas", imagen: "imagenes/habitacion_triple.jpg", descripcion: "Habitación perfecta para familias pequeñas." },
-        habitacion_matrimonial: { nombre: "Habitación matrimonial", precio: 400, capacidad: "2 personas", imagen: "imagenes/habitacion_matrimonial.jpg", descripcion: "Habitación exclusiva para parejas." },
-        habitacion_ejecutiva: { nombre: "Habitación ejecutiva", precio: 500, capacidad: "2-4 personas", imagen: "imagenes/habitacion_ejecutiva.jpg", descripcion: "Habitación de lujo con servicios premium." },
-        habitacion_presidencial: { nombre: "Habitación presidencial", precio: 800, capacidad: "2-4 personas", imagen: "imagenes/habitacion_presidencial.jpg", descripcion: "Habitación de alta gama para VIPs." },
-        apartahotel: { nombre: "Apartahotel", precio: 600, capacidad: "4-6 personas", imagen: "imagenes/apartahotel.jpg", descripcion: "Apartamento completo para estadías prolongadas." },
-        habitacion_king: { nombre: "Habitación King", precio: 700, capacidad: "2-5 personas", imagen: "imagenes/habitacion_king.jpg", descripcion: "Habitación espaciosa con comodidades de lujo." }
-    };
-
-    function cambiarHabitacion() {
-        const seleccion = document.getElementById("habitaciones-disponibles").value;
-        const habitacion = habitaciones[seleccion];
-        localStorage.setItem("habitacionSeleccionada", JSON.stringify(habitacion));
-        actualizarInformacionHabitacion();
-    }
-
-    function actualizarInformacionHabitacion() {
-        const habitacion = JSON.parse(localStorage.getItem("habitacionSeleccionada"));
-        if (habitacion) {
-            document.getElementById("imagen-habitacion").src = habitacion.imagen;
-            document.getElementById("nombre-habitacion").textContent = habitacion.nombre;
-            document.getElementById("descripcion-habitacion").textContent = habitacion.descripcion;
-            document.getElementById("precio-habitacion").textContent = `S/ ${habitacion.precio}`;
-            document.getElementById("capacidad-habitacion").textContent = habitacion.capacidad;
-        }
-    }
-
-    function calcularCosto() {
-        const precio = parseFloat(document.getElementById("precio-habitacion").textContent.replace("S/ ", ""));
-        const fechaLlegada = new Date(document.getElementById("fecha-llegada").value);
-        const fechaSalida = new Date(document.getElementById("fecha-salida").value);
-        const noches = (fechaSalida - fechaLlegada) / (1000 * 60 * 60 * 24);
-
-        if (noches > 0) {
-            let costoServicios = 0;
-            document.querySelectorAll(".servicio:checked").forEach(servicio => {
-                costoServicios += parseFloat(servicio.value);
-            });
-
-            const total = (precio * noches) + costoServicios;
-            document.getElementById("total-costo").textContent = `S/ ${total}`;
-        } else {
-            alert("Selecciona fechas válidas");
-        }
-    }
-
-    function confirmarReserva(event) {
-        event.preventDefault();
-        const habitacion = JSON.parse(localStorage.getItem("habitacionSeleccionada"));
-        document.getElementById("confirmacion-habitacion").textContent = habitacion.nombre;
-        document.getElementById("confirmacion-fecha-llegada").textContent = document.getElementById("fecha-llegada").value;
-        document.getElementById("confirmacion-fecha-salida").textContent = document.getElementById("fecha-salida").value;
-
-        const serviciosSeleccionados = Array.from(document.querySelectorAll(".servicio:checked"))
-            .map(servicio => servicio.nextSibling.textContent.trim())
-            .join(", ");
-        document.getElementById("confirmacion-servicios").textContent = serviciosSeleccionados || "Ninguno";
-
-        document.getElementById("confirmacion-total").textContent = document.getElementById("total-costo").textContent;
-        document.getElementById("reserva-confirmada").style.display = "block";
-    }
-
-    window.onload = actualizarInformacionHabitacion;
-    
-
-    function confirmarReserva(event) {
-    event.preventDefault();
-    const habitacion = JSON.parse(localStorage.getItem("habitacionSeleccionada"));
-    const cantidadPersonas = parseInt(document.getElementById("cantidad-personas").value, 10);
-    const capacidadMaxima = parseInt(habitacion.capacidad.match(/\d+/g).pop(), 10);
-
-    if (cantidadPersonas > capacidadMaxima) {
-        alert(`No se puede confirmar la reserva. La habitación seleccionada solo permite hasta ${capacidadMaxima} persona(s).`);
-        return;
-    }
-
-    document.getElementById("confirmacion-habitacion").textContent = habitacion.nombre;
-    document.getElementById("confirmacion-fecha-llegada").textContent = document.getElementById("fecha-llegada").value;
-    document.getElementById("confirmacion-fecha-salida").textContent = document.getElementById("fecha-salida").value;
-    document.getElementById("confirmacion-total").textContent = document.getElementById("total-costo").textContent;
-    document.getElementById("reserva-confirmada").style.display = "block";
+/* Estilos generales del formulario */
+#formulario-reserva {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom right, #f9fcff, #f0f5fa);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 120, 215, 0.1);
+    border: 1px solid #e6f2ff;
 }
 
-</script>
+/* Estilos para etiquetas */
+#formulario-reserva label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0056b3;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
 
-</html>
+/* Estilos para inputs */
+#formulario-reserva input[type="date"], 
+#formulario-reserva input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #b8d4f0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background-color: #f8fbff;
+    color: #333;
+}
+
+#formulario-reserva input[type="date"]:focus, 
+#formulario-reserva input[type="number"]:focus {
+    outline: none;
+    border-color: #0078D7;
+    box-shadow: 0 0 10px rgba(0, 120, 215, 0.2);
+}
+
+/* Contenedor de botones */
+.botones-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Total de costo */
+#total-costo {
+    font-size: 1.5em;
+    color: #0078D7;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #formulario-reserva {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    #formulario-reserva input[type="date"], 
+    #formulario-reserva input[type="number"] {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#formulario-reserva {
+    animation: fadeIn 0.5s ease;
+}

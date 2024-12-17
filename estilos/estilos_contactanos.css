@@ -1,4 +1,17 @@
-/* General styles for the contacto section */
+
+/* Estilos Generales */
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten al tamaño total de los elementos */
+    margin: 0;
+    padding: 100;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Mejora la legibilidad */
+    color: #333; /* Color principal de texto */
+    background-color: #f9f9f9; /* Fondo claro para el cuerpo */
+}/* General styles for the contacto section */
 #contacto {
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +92,6 @@
         font-size: 0.8rem;
     }
 }
-
 
 
 .text-container h1 {
@@ -256,6 +268,7 @@ button:active {
     height: 450px; /* Ajustar altura para mejor visualización */
     border: 0;
 }
+
 /* Responsivity */
 @media (max-width: 1024px) {
     .contact-container h2 {
@@ -313,5 +326,3 @@ button:active {
         padding-left: 0;
     }
 }
-
-
